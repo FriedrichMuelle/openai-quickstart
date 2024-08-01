@@ -10,7 +10,9 @@ from langchain.prompts.chat import (
 from utils import LOG
 
 class TranslationChain:
-    def __init__(self, model_name: str = "gpt-3.5-turbo", verbose: bool = True):
+    # def __init__(self, model_name: str = "gpt-3.5-turbo", verbose: bool = True):
+    # def __init__(self, model_name: str = "gpt-4o-mini-2024-07-18", verbose: bool = True):
+    def __init__(self, model_name: str = "gpt-4o-mini", verbose: bool = True):
         
         # 翻译任务指令始终由 System 角色承担
         template = (
