@@ -1,5 +1,6 @@
 model_name: "gpt-4o-mini-2024-07-18"
-input_file: "tests/test.pdf"
+# input_file: "tests/test.pdf"
+input_file: "tests/The_Old_Man_of_the_Sea.pdf"
 output_file_format: "markdown"
 source_language: "English"
 target_language: "Chinese"
