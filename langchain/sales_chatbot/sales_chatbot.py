@@ -7,8 +7,8 @@ from langchain_openai import ChatOpenAI
 
 
 def initialize_sales_bot(vector_store_dir: str="real_estates_sale"):
-    db = FAISS.load_local(vector_store_dir, OpenAIEmbeddings())
-    llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0)
+    db = FAISS.load_local(vector_store_dir, OpenAIEmbeddings(),allow_dangerous_deserialization=True)
+    llm = ChatOpenAI(model_name="gpt-4o-mini-2024-07-18", temperature=0)
     
     global SALES_BOT    
     SALES_BOT = RetrievalQA.from_chain_type(llm,
